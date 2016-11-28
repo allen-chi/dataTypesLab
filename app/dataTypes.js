@@ -1,6 +1,10 @@
 module.exports ={
 	dataTypes:function(myVar){
 
+		if(typeof(myVar)==='function'){
+		 	return myVar(true);
+		}
+
 		if (myVar ===null || myVar === undefined){
 			return "no value";
 		}
@@ -27,14 +31,12 @@ module.exports ={
 			}
 		}
 
-		if (typeof myVar === "object"){
-			if (myVar){
-				return myVar[2];
-			}
+		if(myVar instanceof Array){
+		 	return myVar[2];
+		 }
 
-			if (myVar === []){
-				return "undefined";
-			}
+		 else{
+		 	return undefined;
 		}
 
 	}

@@ -1,3 +1,4 @@
+
 (function(){
  'use strict';
 
@@ -71,11 +72,11 @@
    });
 
    it("should return `undefined` for `[]`", function() {
-     expect(myApp.dataTypes([])).not.toBeDefined();
+     expect(myApp.dataTypes([])).to.be.undefined;
    });
 
    it("should return `undefined` for `[4, 9]`", function() {
-     expect(myApp.dataTypes([4, 9])).not.toBeDefined();
+     expect(myApp.dataTypes([4, 9])).to.be.undefined;
    });
 
  });
@@ -85,7 +86,7 @@
 
    it("should call the `callback` function with argument true, and return `called callback`", function() {
      var callback = function(arg) {
-       expect(arg).toBeTruthy();
+       expect(arg).to.be.ok;
        if(arg === true) {
          return 'called callback';
        }
