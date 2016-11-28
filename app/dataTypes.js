@@ -27,5 +27,15 @@ module.exports ={
 			}
 		}
 
+		if (typeof myVar === "object"){
+			if (myVar){
+				return myVar[2];
+			}
+
+			if (myVar === []){
+				return "undefined";
+			}
+		}
+
 	}
 }
